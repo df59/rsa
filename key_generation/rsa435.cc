@@ -1,4 +1,39 @@
-// You need to complete this program for a part of your first project.
+/*
+Dustin Franklin
+df59@uakron.edu
+University of Akron Computer Science
+Algorithms Spring 2023
+
+
+
+To build this program:
+
+make clean
+make
+
+To run this program:
+
+simply execute the executable ./rsa435
+
+
+
+This program will:
+
+generate two random 200 decimal digit numbers and verify they are prime numbers
+using fermat's test, then store these two random prime numbers into a single
+file separated by a new line. That file will be named p_q.txt
+
+generate a private key and store it into a file named d_n.txt
+
+generate a public key and store it into a file named e_n.txt
+
+
+
+
+All code involving the BigInteger and BigUnsigned classes were written by Matt
+McCutchen and found at https://mattmccutchen.net/bigint/
+
+*/
 
 // Standard libraries
 #include <cstdlib>
@@ -14,7 +49,7 @@
 #include "BigUnsigned.hh"
 
 int big_int_size = 200; // desired base 10 digits for large primes
- 
+
 BigUnsigned get_random_bigunsigned() {
   BigUnsigned big1 = BigUnsigned(1);
 
@@ -109,15 +144,13 @@ int main() {
   std::cout << "e is " << e << '\n';
   totient = (p - 1) * (q - 1) / gcd(p - 1, q - 1);
   d = modinv(e, totient); // extended euclidian implementation utilized in
-                              // BigIntegerAlgorithms
+                          // BigIntegerAlgorithms
   std::cout << "d has been calculated\n" << d << '\n';
-
 
   save_e_n_file(e, n);
   std::cout << "e and n written to e_n.txt\n";
   save_d_n_file(d, n);
   std::cout << "d and n written to d_n.txt\n";
-
 
   return 0;
 }
