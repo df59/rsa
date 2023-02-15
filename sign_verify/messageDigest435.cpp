@@ -83,7 +83,6 @@ int main(int argc, char *argv[]) {
 
       // sha256 hash of file stored as base 16 BigUnsigned
       BigUnsigned hash_16 = BigUnsignedInABase(sha256(memblock), 16);
-      std::cout << "hash is " << hash_16 << '\n';
 
       // get d_n.txt file, store to d and n
       std::ifstream d_n_file("d_n.txt");
@@ -104,7 +103,6 @@ int main(int argc, char *argv[]) {
       std::cout << "Verifying document.\n";
       // sha256 hash of file stored as base 16 BigUnsigned
       BigUnsigned hash_16 = BigUnsignedInABase(sha256(memblock), 16);
-      std::cout << "hash is " << hash_16 << '\n';
 
       // get e_n.txt file, store to e and n
       std::ifstream e_n_file("e_n.txt");
