@@ -11,17 +11,25 @@ make
 
 This program is executed in the command line in one of two forms:
 
-./executable s file.xyz
+./sign s file.xyz
 
-where s indicates the program will sign file.xyz and save the signature of the sha256 hash of file.xyz to file.xyz.signature.
-It is required to have a private key pair file named d_n.txt in the working directory.
+where s indicates the program will sign file.xyz and save the signature of the
+sha256 hash of file.xyz to file.xyz.signature. It is required to have a private
+key pair file named d_n.txt in the working directory.
 
 or
 
-./executable v file.xyz file.xyz.signature
+./sign v file.xyz file.xyz.signature
 
-where v indicates the program will verify that the hash of file.xyz matches file.xyz.signature.
-It is required to have a public key pair file named e_n.txt in the working directory.
+where v indicates the program will verify that the hash of file.xyz matches
+file.xyz.signature. It is required to have a public key pair file named e_n.txt
+in the working directory.
+
+
+
+
+All code involving the BigInteger and BigUnsigned classes were written by Matt
+McCutchen and found at https://mattmccutchen.net/bigint/
 
 
 */
