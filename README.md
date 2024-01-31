@@ -1,4 +1,4 @@
-RSA Key Fenerator, Signer, and Verifier
+RSA Key Generator, Signer, and Verifier
 
 Dustin Franklin
 
