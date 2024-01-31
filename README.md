@@ -1,7 +1,8 @@
+RSA Key Fenerator, Signer, and Verifier
+
 Dustin Franklin
+
 df59@uakron.edu
-University of Akron Computer Science
-Algorithms Spring 2023
 
 To build the key generation program, inside the key_generation directory, run:
 
