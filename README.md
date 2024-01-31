@@ -5,7 +5,6 @@ Algorithms Spring 2023
 
 To build the key generation program, inside the key_generation directory, run:
 
-make clean
 make
 
 To run this program:
@@ -29,7 +28,6 @@ generate a public key and store it into a file named e_n.txt
 
 To build the sign executable program, inside the sign_verify directory run:
 
-make clean
 make
 
 This program is executed in the command line in one of two forms:
